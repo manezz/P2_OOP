@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+using System.ComponentModel;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +27,12 @@ namespace WPF_OOP_3
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void connectButton_Click(object sender, RoutedEventArgs e)
+        {
+            string connectionString;
+            SqlConnection cnn;
         }
     }
 }
