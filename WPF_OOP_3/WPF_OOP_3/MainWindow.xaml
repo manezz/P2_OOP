@@ -19,5 +19,8 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
+
+        <Button x:Name="connectButton" Content="Connect" Grid.Column="1" Grid.Row="1" FontSize="14" Margin="10"></Button>
+        
     </Grid>
 </Window>
