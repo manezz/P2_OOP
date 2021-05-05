@@ -16,11 +16,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mano\\source\\repos\\WPF_OOP_3\\WPF_OOP_3\\WPF_OOP_3.csproj",
+      "projectUniqueName": "C:\\Users\\mano\\source\\repos\\P2_OOP\\WPF_OOP_3\\WPF_OOP_3\\WPF_OOP_3.csproj",
       "projectName": "WPF_OOP_3",
-      "projectPath": "C:\\Users\\mano\\source\\repos\\WPF_OOP_3\\WPF_OOP_3\\WPF_OOP_3.csproj",
+      "projectPath": "C:\\Users\\mano\\source\\repos\\P2_OOP\\WPF_OOP_3\\WPF_OOP_3\\WPF_OOP_3.csproj",
       "packagesPath": "C:\\Users\\mano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mano\\source\\repos\\WPF_OOP_3\\WPF_OOP_3\\obj\\",
+      "outputPath": "C:\\Users\\mano\\source\\repos\\P2_OOP\\WPF_OOP_3\\WPF_OOP_3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
