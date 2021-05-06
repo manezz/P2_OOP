@@ -20,3 +20,10 @@ C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\obj\Debug\net5.0-windows\W
 C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\obj\Debug\net5.0-windows\ref\WPF_OOP_3.dll
 C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\obj\Debug\net5.0-windows\WPF_OOP_3.pdb
 C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\obj\Debug\net5.0-windows\WPF_OOP_3.genruntimeconfig.cache
+C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mano\source\repos\P2_OOP\WPF_OOP_3\WPF_OOP_3\obj\Debug\net5.0-windows\WPF_OOP_3.csproj.CopyComplete

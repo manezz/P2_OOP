@@ -35,7 +35,16 @@ namespace WPF_OOP_3
 
 		private void connectButton_Click(object sender, RoutedEventArgs e)
 		{
-			
+			SqlConnection cnn = new SqlConnection(connectionString);
+			cnn.Open();
+			if (cnn.State == ConnectionState.Open)
+            {
+				MessageBox.Show("Open");
+            }
+			else
+            {
+				MessageBox.Show("Closed");
+            }
 		}
 	}
 }
