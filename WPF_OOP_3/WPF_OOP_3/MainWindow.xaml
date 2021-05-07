@@ -9,19 +9,22 @@
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="20"></ColumnDefinition>
-			<ColumnDefinition Width="auto"></ColumnDefinition>
-			<ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
 			<ColumnDefinition Width="20"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="20"></RowDefinition>
-			<RowDefinition Height="auto"></RowDefinition>
-			<RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
 			<RowDefinition Height="20"></RowDefinition>
 		</Grid.RowDefinitions>
 
-		<Button x:Name="connectButton" Content="Connect" Grid.Column="1"
+        <Button x:Name="connectButton" Content="Connect" Grid.Column="1"
 				Grid.Row="1" FontSize="14" Margin="10" Click="connectButton_Click"></Button>
-		
-	</Grid>
+
+        <TextBlock x:Name="connectText" Grid.Column="1" Grid.Row="3" FontSize="12"
+                Margin="10,10,10,10"></TextBlock>
+    </Grid>
 </Window>

@@ -7,6 +7,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.ComponentModel;
 using System.Drawing;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -31,20 +32,23 @@ namespace WPF_OOP_3
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			SqlConnection joe = new SqlConnection(connectionString);
+			try
+            {
+				joe.Open();
+				connectText.Text = $"Server Status: {joe.State}";
+				joe.Close();
+			}
+			catch (Exception) 
+			{
+				connectText.Text = "Server Status: Closed";
+			}
 		}
 
 		private void connectButton_Click(object sender, RoutedEventArgs e)
 		{
-			SqlConnection cnn = new SqlConnection(connectionString);
-			cnn.Open();
-			if (cnn.State == ConnectionState.Open)
-            {
-				MessageBox.Show("Open");
-            }
-			else
-            {
-				MessageBox.Show("Closed");
-            }
+			
 		}
 	}
 }
