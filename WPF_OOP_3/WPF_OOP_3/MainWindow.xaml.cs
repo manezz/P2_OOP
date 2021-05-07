@@ -27,22 +27,40 @@ namespace WPF_OOP_3
 	public partial class MainWindow : Window
 	{
 		string connectionString = @"Data Source=192.168.4.124;Initial Catalog = joe; User ID = sa; Password=Passw0rd;Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-		
+
+
 
 		public MainWindow()
 		{
 			InitializeComponent();
 
-			SqlConnection joe = new SqlConnection(connectionString);
-			try
+			Thread t1 = new Thread(new ThreadStart(SeverStatus));
+			t1.IsBackground = true;
+			t1.Start();
+		}
+
+		private void SeverStatus()
+		{
+			while (true)
             {
-				joe.Open();
-				connectText.Text = $"Server Status: {joe.State}";
-				joe.Close();
-			}
-			catch (Exception) 
-			{
-				connectText.Text = "Server Status: Closed";
+				SqlConnection joe = new SqlConnection(connectionString);
+				try
+				{
+					joe.Open();
+					Dispatcher.Invoke(new Action(() =>
+					{
+						connectText.Text = $"Server Status: {joe.State}";
+					}));
+					joe.Close();
+				}
+				catch (Exception)
+				{
+					Dispatcher.Invoke(new Action(() =>
+					{
+						connectText.Text = "Server Status: Closed";
+					}));
+				}
+				Thread.Sleep(10000);
 			}
 		}
 
@@ -50,5 +68,6 @@ namespace WPF_OOP_3
 		{
 			
 		}
+
 	}
 }
