@@ -24,15 +24,16 @@ namespace WPF_OOP_3
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
+	
 	public partial class MainWindow : Window
 	{
 		string connectionString = @"Data Source=192.168.4.124;Initial Catalog = joe; User ID = sa; Password=Passw0rd;Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-
-
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			SqlConnection joeTest = new SqlConnection(connectionString);
 
 			Thread t1 = new Thread(new ThreadStart(SeverStatus));
 			t1.IsBackground = true;
@@ -43,15 +44,15 @@ namespace WPF_OOP_3
 		{
 			while (true)
             {
-				SqlConnection joe = new SqlConnection(connectionString);
+				SqlConnection joeTest = new SqlConnection(connectionString);
 				try
 				{
-					joe.Open();
+					joeTest.Open();
 					Dispatcher.Invoke(new Action(() =>
 					{
-						connectText.Text = $"Server Status: {joe.State}";
+						connectText.Text = $"Server Status: {joeTest.State}";
 					}));
-					joe.Close();
+					joeTest.Close();
 				}
 				catch (Exception)
 				{
@@ -64,10 +65,14 @@ namespace WPF_OOP_3
 			}
 		}
 
-		private void connectButton_Click(object sender, RoutedEventArgs e)
+		private void LoadData()
 		{
 			
 		}
 
-	}
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+			
+        }
+    }
 }
