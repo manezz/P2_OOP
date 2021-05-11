@@ -65,11 +65,6 @@ namespace WPF_OOP_3
 			}
 		}
 
-		private void LoadData()
-		{
-			
-		}
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 			
