@@ -33,6 +33,8 @@ namespace WPF_OOP_3
 		{
 			InitializeComponent();
 
+			BindDataGrid();
+
 			SqlConnection joeTest = new SqlConnection(connectionString);
 
 			Thread t1 = new Thread(new ThreadStart(SeverStatus));
@@ -65,9 +67,41 @@ namespace WPF_OOP_3
 			}
 		}
 
+		private void BindDataGrid()
+        {
+			SqlConnection joeGrid = new SqlConnection(connectionString);
+
+			joeGrid.Open();
+			SqlCommand cmd = new SqlCommand();
+			cmd.CommandText = "select * from [MovieTable]";
+			cmd.Connection = joeGrid;
+			SqlDataAdapter da = new SqlDataAdapter(cmd);
+			DataTable dt = new DataTable("MovieTable");
+			da.Fill(dt);
+
+			MovieTableGrid.ItemsSource = dt.DefaultView;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-			
+
+
+			SqlDataAdapter adapter = new SqlDataAdapter();
+			SqlConnection cnn = new SqlConnection(connectionString);
+			SqlCommand command;
+			string sql = "";
+
+			cnn.Open();
+
+			sql = $"Insert into MovieTable (Name,Director,YearOfRelease) values('{Name.Text}','{Director.Text}',{YearOfRelease.Text})";
+
+			command = new SqlCommand(sql, cnn);
+
+			adapter.InsertCommand = new SqlCommand(sql, cnn);
+			adapter.InsertCommand.ExecuteNonQuery();
+
+			command.Dispose();
+			cnn.Close();
         }
     }
 }

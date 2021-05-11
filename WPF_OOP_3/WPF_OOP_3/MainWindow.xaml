@@ -10,12 +10,14 @@
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="20"></ColumnDefinition>
             <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="150"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
 			<ColumnDefinition Width="20"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
@@ -32,22 +34,26 @@
         <TextBlock Grid.Column="1" Grid.Row="2" FontSize="14"
             Margin="10,10,10,10">Name</TextBlock>
         <TextBox Grid.Column="2" Grid.Row="2" FontSize="12"
-                   Margin="10,10,10,10"></TextBox>
+                   Margin="10,10,10,10" Width="150" Name="Name"></TextBox>
 
         <TextBlock Grid.Column="1" Grid.Row="3" FontSize="14"
             Margin="10,10,10,10">Director</TextBlock>
         <TextBox Grid.Column="2" Grid.Row="3" FontSize="12"
-                   Margin="10,10,10,10"></TextBox>
+                   Margin="10,10,10,10" Width="150" Name="Director"></TextBox>
 
         <TextBlock Grid.Column="1" Grid.Row="4" FontSize="14"
             Margin="10,10,10,10">Year Of Release</TextBlock>
         <TextBox Grid.Column="2" Grid.Row="4" FontSize="12"
-                   Margin="10,10,10,10"></TextBox>
+                   Margin="10,10,10,10" Width="150" Name="YearOfRelease"></TextBox>
 
         <Button Grid.Column="1" Grid.Row="5" FontSize="12"
                 Margin="10,10,10,10" Click="Button_Click">Add Movie</Button>
+
+        <DataGrid Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="4" Name="MovieTableGrid"
+                  Margin="10,10,10,10" IsReadOnly="True"></DataGrid>
         
-        <TextBlock x:Name="connectText" Grid.Column="1" Grid.Row="7" FontSize="12"
-                Margin="10,10,10,10"></TextBlock>
+        <TextBlock x:Name="connectText" Grid.Column="1" Grid.Row="8" 
+                   FontSize="12" Margin="10,10,10,10"></TextBlock>
+        
     </Grid>
 </Window>
