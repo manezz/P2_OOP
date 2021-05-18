@@ -1,0 +1,16 @@
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\bin\Debug\net5.0\Opgave 2.exe
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\bin\Debug\net5.0\Opgave 2.deps.json
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\bin\Debug\net5.0\Opgave 2.runtimeconfig.json
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\bin\Debug\net5.0\Opgave 2.runtimeconfig.dev.json
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\bin\Debug\net5.0\Opgave 2.dll
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\bin\Debug\net5.0\ref\Opgave 2.dll
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\bin\Debug\net5.0\Opgave 2.pdb
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\obj\Debug\net5.0\Opgave 2.csprojAssemblyReference.cache
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\obj\Debug\net5.0\Opgave 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\obj\Debug\net5.0\Opgave 2.AssemblyInfoInputs.cache
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\obj\Debug\net5.0\Opgave 2.AssemblyInfo.cs
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\obj\Debug\net5.0\Opgave 2.csproj.CoreCompileInputs.cache
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\obj\Debug\net5.0\Opgave 2.dll
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\obj\Debug\net5.0\ref\Opgave 2.dll
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\obj\Debug\net5.0\Opgave 2.pdb
+C:\Users\Magnu\iCloudDrive\Programmering\C#\Console\OOP #5 P2\Opgave 2\obj\Debug\net5.0\Opgave 2.genruntimeconfig.cache
