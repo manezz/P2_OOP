@@ -33,10 +33,6 @@ namespace WPF_OOP_3
 		{
 			InitializeComponent();
 
-			BindDataGrid();
-
-			SqlConnection joeTest = new SqlConnection(connectionString);
-
 			Thread t1 = new Thread(new ThreadStart(SeverStatus));
 			t1.IsBackground = true;
 			t1.Start();
@@ -47,6 +43,7 @@ namespace WPF_OOP_3
 			while (true)
             {
 				SqlConnection joeTest = new SqlConnection(connectionString);
+				SqlConnection joeGrid = new SqlConnection(connectionString);
 				try
 				{
 					joeTest.Open();
@@ -63,29 +60,54 @@ namespace WPF_OOP_3
 						connectText.Text = "Server Status: Closed";
 					}));
 				}
-				Thread.Sleep(10000);
+
+				joeGrid.Open();
+
+				SqlCommand cmd = new SqlCommand();
+				cmd.CommandText = "select * from [MovieTable]";
+				cmd.Connection = joeGrid;
+				SqlDataAdapter da = new SqlDataAdapter(cmd);
+				DataTable dt = new DataTable("MovieTable");
+				da.Fill(dt);
+
+				Dispatcher.Invoke(new Action(() =>
+				{
+					MovieTableGrid.ItemsSource = dt.DefaultView;
+				}));
+
+				Thread.Sleep(5000);
 			}
 		}
 
-		private void BindDataGrid()
-        {
-			SqlConnection joeGrid = new SqlConnection(connectionString);
-
-			joeGrid.Open();
-			SqlCommand cmd = new SqlCommand();
-			cmd.CommandText = "select * from [MovieTable]";
-			cmd.Connection = joeGrid;
-			SqlDataAdapter da = new SqlDataAdapter(cmd);
-			DataTable dt = new DataTable("MovieTable");
-			da.Fill(dt);
-
-			MovieTableGrid.ItemsSource = dt.DefaultView;
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+			SqlDataAdapter adapter = new SqlDataAdapter();
+			SqlConnection cnn = new SqlConnection(connectionString);
+			SqlCommand command;
+			string sql = "";
 
+			try
+            {
+				cnn.Open();
 
+				sql = $"Insert into MovieTable (Name,Director,YearOfRelease) values('{Name.Text}','{Director.Text}',{YearOfRelease.Text})";
+
+				command = new SqlCommand(sql, cnn);
+
+				adapter.InsertCommand = new SqlCommand(sql, cnn);
+				adapter.InsertCommand.ExecuteNonQuery();
+
+				command.Dispose();
+				cnn.Close();
+			}
+			catch (Exception)
+            {
+				MessageBox.Show("You have til fill the form out");
+            }
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
 			SqlDataAdapter adapter = new SqlDataAdapter();
 			SqlConnection cnn = new SqlConnection(connectionString);
 			SqlCommand command;
@@ -93,15 +115,13 @@ namespace WPF_OOP_3
 
 			cnn.Open();
 
-			sql = $"Insert into MovieTable (Name,Director,YearOfRelease) values('{Name.Text}','{Director.Text}',{YearOfRelease.Text})";
+			sql =  $"Delete MovieTable where Name='{Name.Text}' and Director='{Director.Text}' and YearOfRelease={YearOfRelease.Text}";
+
+			adapter.DeleteCommand = new SqlCommand(sql, cnn);
+			adapter.DeleteCommand.ExecuteNonQuery();
 
 			command = new SqlCommand(sql, cnn);
-
-			adapter.InsertCommand = new SqlCommand(sql, cnn);
-			adapter.InsertCommand.ExecuteNonQuery();
-
-			command.Dispose();
 			cnn.Close();
-        }
+		}
     }
 }
