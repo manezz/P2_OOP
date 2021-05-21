@@ -39,7 +39,7 @@ namespace ASP_NET_OOP_Opg3.Controllers
             {
                 con.Open();
                 com.Connection = con;
-                com.CommandText = "SELECT TOP (1000) [ID], [Name], [Director], [YearOfRelease], FROM [joe].[dbo].[MovieTable]";
+                com.CommandText = "SELECT TOP (1000) [ID], [Name], [Director], [YearOfRelease] FROM [joe].[dbo].[MovieTable]";
                 dr = com.ExecuteReader();
                 while(dr.Read())
                 {

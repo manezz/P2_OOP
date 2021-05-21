@@ -61,7 +61,7 @@ namespace ASP_NET_OOP_Opg3.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Data Source=&quot;192.168.4.124;Initial Catalog=joe;User ID=sa;Password=Passw0rd;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False&quot;; integrated security = SSPI;.
+        ///   Looks up a localized string similar to Data Source= &quot;192.168.4.124&quot;; Initial Catalog=&quot;joe&quot;; User ID= &quot;sa&quot;; Password= &quot;Passw0rd&quot;; Connect Timeout= &quot;30&quot;; Encrypt= &quot;False&quot;; TrustServerCertificate= &quot;False&quot;; ApplicationIntent= &quot;ReadWrite&quot;; MultiSubnetFailover=&quot;False&quot;;.
         /// </summary>
         internal static string ConnectionString {
             get {
