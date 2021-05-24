@@ -21,6 +21,7 @@ namespace ASP_NET_OOP_Opg3.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            // sætter connectoionstring
             con.ConnectionString = ASP_NET_OOP_Opg3.Properties.Resources.ConnectionString;
         }
 
@@ -37,6 +38,7 @@ namespace ASP_NET_OOP_Opg3.Controllers
             }
             try
             {
+                // Vælger film
                 con.Open();
                 com.Connection = con;
                 com.CommandText = "SELECT TOP (1000) [ID], [Name], [Director], [YearOfRelease] FROM [joe].[dbo].[MovieTable]";
