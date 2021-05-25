@@ -28,6 +28,8 @@ namespace Opgave_4
 
 	class Program
 	{
+        // Det bruger alle sammen frugtSlags()
+        //men det giver forskæligt resultat efter hvem der kalder på den
 		static void Main(string[] args)
 		{
             Frugt myApple = new Frugt();

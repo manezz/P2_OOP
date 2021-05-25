@@ -13,6 +13,7 @@ namespace Opgave_2
 	}
 	class Restaurant : Food
 	{
+		// Food is ready blvier overrided
 		public override void foodIsReady()
 		{
 			Console.WriteLine("Food is ready");

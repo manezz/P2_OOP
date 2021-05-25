@@ -27,6 +27,7 @@ namespace WPF_OOP_3
 	
 	public partial class MainWindow : Window
 	{
+		// connection String
 		string connectionString = @"Data Source=192.168.4.124;Initial Catalog = joe; User ID = sa; Password=Passw0rd;Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
 		public MainWindow()
@@ -38,6 +39,7 @@ namespace WPF_OOP_3
 			t1.Start();
 		}
 
+		// checker hvert 5 second om serveren stadig er online og opdatere data_grid
 		private void SeverStatus()
 		{
 			while (true)
@@ -79,6 +81,7 @@ namespace WPF_OOP_3
 			}
 		}
 
+		// laver en ny film i sql tabelen
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 			SqlDataAdapter adapter = new SqlDataAdapter();
@@ -106,6 +109,7 @@ namespace WPF_OOP_3
             }
         }
 
+		// sletter den valgte film fra sql tabelen
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
 			SqlDataAdapter adapter = new SqlDataAdapter();

@@ -10,6 +10,7 @@ namespace Opgave_3
             { get; set; }
         }
 
+        // Det er encapsulated ved at det ikke ligger direkte i generation string
         static void Main(string[] args)
         {
             Apple myApple = new Apple();
